@@ -1,7 +1,7 @@
 {
   "name": "vibe_utils",
   "version": "1.0.0",
-  "description": "My bot!",
+  "description": "Utility bot for Vibe Market!",
   "main": "index.js",
   "dependencies": {
     "discord.js": "^12.5.3",
