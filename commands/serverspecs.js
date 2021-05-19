@@ -8,7 +8,8 @@ module.exports = {
         const serverSpecsEmbed = new Discord.MessageEmbed()
         .setColor('#9da9f0')
         .addFields(
-           {name: "My server specs", value: `CPU: AMD EPYC 7282 16 cores (we only have 6 of those 16)
+           {name: "My server specs", value: `Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20 GHz
+           vCores: 6
            RAM: 16 gigabytes DDR4
            Disk Space: 400 gigabytes
            Uplink: 400 mbps
