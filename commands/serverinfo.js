@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const { prefix } = require('../config/config.json');
 module.exports = {
     name: 'serverinfo',
-    description: 'Shows my vibe stats',
+    description: 'Shows serverinfo',
     aliases: ['s'],
     execute(message) {
         const serverSpecsEmbed = new Discord.MessageEmbed()
