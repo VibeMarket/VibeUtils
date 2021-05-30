@@ -9,7 +9,7 @@ module.exports = {
         const serverSpecsEmbed = new Discord.MessageEmbed()
         .setColor(embedColor)
         .addFields(
-           {name: "Vibe Members", value: `${message.guild.memeberCount}`}
+           {name: "Vibe Members", value: `${message.guild.memberCount}`}
         )
         .setFooter("Made by Cryptic#0001 | © Vibe Market")
      message.channel.send(serverSpecsEmbed);
