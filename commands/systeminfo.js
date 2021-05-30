@@ -1,12 +1,13 @@
 const { prefix } = require('../config/config.json');
 const Discord = require('discord.js');
+const { embedColor } = require('../config/config.json');
 module.exports = {
     name: 'systeminfo',
     description: 'Shows an embed explaining systems and how they work!',
     aliases: ['si'],
     execute(message) {
         const systeminfoEmbed = new Discord.MessageEmbed()
-        .setColor('#9da9f0')
+        .setColor(embedColor)
         .addFields(
             {name: '**System Information 1**', value: `**Why does it say BOT beside someone’s name?**e
             I can assure you they aren’t a bot. PluralKit and Tupperbox will help systems switch between alters, and due to Discord’s limitations, it must have BOT beside their name since the bots are editing the message to say which alter is sending the message.

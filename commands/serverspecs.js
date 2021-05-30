@@ -1,12 +1,13 @@
 const Discord = require('discord.js');
 const { prefix } = require('../config/config.json');
+const { embedColor } = require('../config/config.json');
 module.exports = {
     name: 'serverspecs',
     description: 'Shows my server specifications',
     aliases: ['ss'],
     execute(message) {
         const serverSpecsEmbed = new Discord.MessageEmbed()
-        .setColor('#9da9f0')
+        .setColor(embedColor)
         .addFields(
            {name: "My server specs", value: `Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20 GHz
            vCores: 6
