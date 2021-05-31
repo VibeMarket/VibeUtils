@@ -9,8 +9,8 @@ module.exports = {
         .setColor('#9da9f0')
         .addFields(
            {name: "Members", value: `${message.guild.memberCount}`},
-           {name: "Rules", value: `<!#${message.guild.rulesChannelID}>`},
-           {name: "Owner", value: `<!@${message.guild.ownerID}>`},
+           {name: "Rules", value: `<#${message.guild.rulesChannelID}>`},
+           {name: "Owner", value: `<@${message.guild.ownerID}>`},
         )
         .setFooter("Made by Cryptic#0001 | © Vibe Market")
      message.channel.send(serverInfoEmbed);
