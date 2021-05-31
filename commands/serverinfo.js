@@ -15,3 +15,4 @@ module.exports = {
         .setFooter("Made by Cryptic#0001 | © Vibe Market")
      message.channel.send(serverInfoEmbed);
     }
+}
