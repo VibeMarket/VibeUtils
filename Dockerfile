@@ -6,7 +6,6 @@ WORKDIR /usr/src/bot
 
 # Copy and Install our bot
 COPY package.json /usr/src/bot
-COPY .env /usr/src/bot
 RUN npm install
 
 # Our precious bot
