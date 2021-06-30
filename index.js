@@ -4,7 +4,6 @@ const path = require('path');
 const {prefix, ownerID, reactEmoji, token} = require('./config/config.json');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
-require('dotenv').config();
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
