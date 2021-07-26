@@ -9,7 +9,7 @@ module.exports = {
         const systeminfoEmbed = new Discord.MessageEmbed()
         .setColor(embedColor)
         .addFields(
-            {name: '**System Information 1**', value: `**Why does it say BOT beside someone’s name?**e
+            {name: '**System Information 1**', value: `**Why does it say BOT beside someone’s name?**
             I can assure you they aren’t a bot. PluralKit and Tupperbox will help systems switch between alters, and due to Discord’s limitations, it must have BOT beside their name since the bots are editing the message to say which alter is sending the message.
    
            **Why does one alter not remember something another does?**
