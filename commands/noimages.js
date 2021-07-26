@@ -9,7 +9,7 @@ module.exports = {
     const noimagesEmbed = new Discord.MessageEmbed()
     .setColor(embedColor)
     .addFields(
-        {name: "Why can't I post images in hangout?", value: 'Once you reach level 5 you will be able to post images in hangout, to level up all you need to do is talk!'} 
+        {name: "Why can't I post images in hangout?", value: 'Once you reach level 5, you will be able to post images in hangout, to level up all you need to do is talk!'} 
     )
     .setFooter("Made by Cryptic#0001 | © Vibe Market ")
      message.channel.send(noimagesEmbed);
