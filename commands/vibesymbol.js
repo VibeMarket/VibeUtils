@@ -9,7 +9,7 @@ module.exports = {
     const vibeSymbolEmbed = new Discord.MessageEmbed()
     .setColor(embedColor)
     .addFields(
-        {name: "Why do some people have a 'ツ' symbol after their name?", value: "In most cases, this symbol after a name means someone is staff, so you can ping them if you need assistance or have a question. You can tell staff more accurately by the colour and name of their role though; pink or purple names with that symbol are not staff."}
+        {name: "Why do some people have a 'ツ' symbol after their name?", value: "In most cases, this symbol after a name means someone is staff, so you can ping them if you need assistance or have a question. You can determine staff more accurately by the color and name of their role; Pink or purple names with that symbol are not staff."}
     )
     .setFooter("Made by Cryptic#0001 | © Vibe Market")
      message.channel.send(vibeSymbolEmbed);
