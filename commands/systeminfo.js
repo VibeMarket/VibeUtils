@@ -21,7 +21,7 @@ module.exports = {
         .setFooter("Made by Cryptic#0001 | © Vibe Market")
 
       const systeminfo2Embed = new Discord.MessageEmbed()
-      .setColor('#9da9f0')
+      .setColor(embedColor)
       .addFields(
          {name: '**System Information 2**', value: `
          **Why do some alters in the same system use different voices when they’re in the same body?**
@@ -33,7 +33,7 @@ module.exports = {
      .setFooter("Made by Cryptic#0001 | © Vibe Market")
 
      const systeminfo3Embed = new Discord.MessageEmbed()
-     .setColor('#9da9f0')
+     .setColor(embedColor)
      .addFields(
          {name: '**System Information 3**', value: `**Can I ask an alter to front to talk to me?**
          You can ask whoever is fronting if the other alter is comfortable fronting or wants to talk, but don’t force it. Alters need their own space sometimes, and some don’t come and go easily.
