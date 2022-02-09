@@ -7,7 +7,7 @@ Docker image: https://hub.docker.com/repository/docker/itscryptic/vibeutils/
 
 # Running yourself
 
-Run git clone https://github.com/VibeMarkket/VibeUtils/
+Run git clone https://github.com/VibeMarket/VibeUtils/
 Edit the config.yml with your bots token 
 Then run ducker build -t vibeutils . while you're in the VibeUtils directory.
 Then run docker run -d vibeutils this should bring the bot online!
