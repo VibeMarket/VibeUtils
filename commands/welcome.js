@@ -4,7 +4,7 @@ const { embedColor } = require('../config/config.json');
 module.exports = {
     name: 'welcome',
     description: 'Just a basic welcome command!',
-    aliases: ['wel;],
+    aliases: ['wel'],
     execute(message) {
         const welcomeEmbed = new Discord.MessageEmbed()
         .setColor(embedColor)
