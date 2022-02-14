@@ -12,8 +12,9 @@ for (const file of commandFiles) {
 }
 
 client.on('message', message => {
-    if ('welcome' === message.content.toLowerCase()) {
+    if (message.content.includes('Welcome')) {
      message.react(reactEmoji)
+     console.log(`Reacted on ${message.author.username}'s message.`)
     }
     if (!message.content.startsWith(prefix) || message.author.bot) return;
     const args = message.content.slice(prefix.length).trim().split(/ +/);
