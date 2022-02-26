@@ -12,20 +12,18 @@ for (const file of commandFiles) {
     client.commands.set(command.name, command);
 }
 
-/*for (const file of eventFiles) {
+for (const file of eventFiles) {
 	const event = require(`./events/${file}`);
 	if (event.once) {
-		client.once(event.name, (...args) => event.execute(...args));
+		client.once(event.name, (...args) => event.execute(...args, client));
 	} else {
-		client.on(event.name, (...args) => event.execute(...args));
-	}*/
+		client.on(event.name, (...args) => event.execute(...args, client));
+	}
 
 client.on('message', message => {
-    if (message.content.includes('Welcome')) {
-     message.react(reactEmoji)
-     console.log(`Reacted on ${message.author.username}'s message.`)
-    }else {
-        console.log(`I was unable to react on ${message.author.username}'s message.`);
+    if (message.content.toLowerCase().startsWith('welcome')) {
+     message.react(reactEmoji);
+     console.log(`Reacted on ${message.author.tag}'s message.`);
     }
     if (!message.content.startsWith(prefix) || message.author.bot) return;
     const args = message.content.slice(prefix.length).trim().split(/ +/);
@@ -41,10 +39,5 @@ client.on('message', message => {
         message.reply('There was an error while trying to execute that command!');
     }
 });
-client.once("ready", () => {
-    client.user.setActivity('you | +help', {
-        type: "WATCHING"
-    });
-    console.log("Logged in as " + client.user.username + "#" + client.user.discriminator);
-});
-client.login(token);
+client.login(token)
+}
