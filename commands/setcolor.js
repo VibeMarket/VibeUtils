@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-
+const { prefix } = require('./config/config.json');
 module.exports = { 
     name: 'setcolor',
     args: true,
