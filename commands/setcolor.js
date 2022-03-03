@@ -21,7 +21,7 @@ module.exports = {
         .addField(`Color changed to: ${args[1]}.`, "Your color has been changed.");
         const donthaveRoleEmbed = Discord.MessageEmbed()
         .setColor(embedColor)
-        .addField("Added: ", "I noticed you already have a role, adding it back now.");
+        .addField("Info: ", "I noticed you already have a role, adding it back now.");
         if (message.member.roles.cache.some(role => role.name === '✭ Booster')) {
             if (!args[1]) message.channel.send(specifyAColorEmbed);
             let role = message.guild.roles.cache.find(role => role.name === message.author.username);
