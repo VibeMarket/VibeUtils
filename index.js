@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+
 const fs = require('fs');
 const {prefix, reactEmoji, token, clientId, guildId} = require('./config/config.json');
 const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
@@ -18,7 +18,6 @@ for (const file of commandFiles) {
 
 const commands = [];
 const slashcommandFiles = fs.readdirSync('./slashcommands').filter(file => file.endsWith('.js'));
-
 for (const file of slashcommandFiles) {
 	const command = require(`./slashcommands/${file}`);
 	commands.push(command.data.toJSON());
@@ -38,21 +37,6 @@ for (const file of eventFiles) {
 		client.on(event.name, (...args) => event.execute(...args, client));
 	}
 
-    client.on('interactionCreate', async interaction => {
-        if (!interaction.isCommand()) return;
-    
-        const command = client.commands.get(interaction.commandName);
-    
-        if (!command) return;
-    
-        try {
-            await command.execute(interaction);
-        } catch (error) {
-            console.error(error);
-            await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
-        }
-    },
-
 client.on('message', message => {
     if (message.content.toLowerCase().startsWith('welcome')) {
      message.react(reactEmoji);
@@ -71,5 +55,23 @@ client.on('message', message => {
         console.error(error);
         message.reply('There was an error while trying to execute that command!');
     }
-}))};
+    
+})};
+
+client.on('interactionCreate', async (interaction) => {
+    if (!interaction.isCommand()) return;
+
+    const command = client.commands.get(interaction.commandName);
+
+    if (!command) return;
+
+    try {
+        await command.execute(interaction);
+        console.log("I've awoken")
+    } catch (error) {
+        console.error(error);
+        await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+    }
+});
+
 client.login(token);
