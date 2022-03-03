@@ -22,7 +22,7 @@ module.exports = {
         if (message.member.roles.cache.some(role => role.name === '✭ Booster')) {
             if (!args[1]) message.channel.send(specifyAColorEmbed);
             let role = message.guild.roles.cache.find(role => role.name === message.author.username);
-            if (role) role.edit({ name: message.author.username, color: args[1]}).then(message.channel.send(colorChangedEmbed));
+            if (role) role.edit({ name: message.author.username, color: args[1]});
             else {
                 message.guild.roles.create(
                     {data: {name: message.author.username, color: args[1], permissions: 0}}).then(role => {role.setPosition(100); message.member.roles.add(role)}); message.channel.send(roleAddedEmbed);};
