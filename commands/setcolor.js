@@ -1,21 +1,31 @@
 const Discord = require('discord.js');
-const { prefix } = require('../config/config.json');
+const { prefix, embedColor } = require('../config/config.json');
 module.exports = { 
     name: 'setcolor',
     args: true,
     description: 'Set role color. Limited to boosters.',
     execute(message) {
         const args = message.content.slice(prefix.length).trim().split(/ +/);
+        const specifyAColorEmbed = new Discord.MessageEmbed()
+        .setColor(embedColor)
+        .addField("Error: ", "Please specify a color!")
+        const roleAddedEmbed = new Discord.MessageEmbed()
+        .setColor(args[1])
+        .addField(`Color: ${args[1]} set!`, "Your color has been set.")
+        .setFooter("Run +setcolor again to set the color to a new one.");
+        const mustBeBoosterEmbed = new Discord.MessageEmbed()
+        .setColor(embedColor)
+        .addField("Error: ", "You must be a ✭ Booster to use this command.");
         //let role = message.guild.roles.find(x => x.name == message.author.username);
         if (message.member.roles.cache.some(role => role.name === '✭ Booster')) {
-            if (!args[1]) message.channel.send("Please specify a color.");
-            let role1 = message.guild.roles.cache.find(role => role.name === message.author.username);
-            if (role1) role1.edit({ name: message.author.username, color: args[1]});
+            if (!args[1]) message.channel.send(specifyAColorEmbed);
+            let role = message.guild.roles.cache.find(role => role.name === message.author.username);
+            if (role) role.edit({ name: message.author.username, color: args[1]});
             else {
                 message.guild.roles.create(
-                    {data: {name: message.author.username, color: args[1], permissions: 0}}).then(role => {role.setPosition(100); message.member.roles.add(role)}); message.channel.send("I've created the role and I have given you it. If you experience any issues with this command, please contact Kevin.");};
+                    {data: {name: message.author.username, color: args[1], permissions: 0}}).then(role => {role.setPosition(100); message.member.roles.add(role)}); message.channel.send(roleAddedEmbed);};
         }else {
-            message.channel.send("You have to be a ```✭ Booster``` to use this command.");
+            message.channel.send(mustBeBoosterEmbed);
         }
     }
 }
