@@ -24,7 +24,7 @@ module.exports = {
         .addField("Added: ", "I noticed you already have a role, adding it back now.");
         if (message.member.roles.cache.some(role => role.name === '✭ Booster')) {
             if (!args[1]) message.channel.send(specifyAColorEmbed);
-            if (!message.member.roles.has(message.author.username)) message.member.roles.add(message.author.username); message.channel.send(donthaveRoleEmbed);
+            if (role) if (!message.member.roles.has(message.author.username)) message.member.roles.add(message.author.username); message.channel.send(donthaveRoleEmbed);
             let role = message.guild.roles.cache.find(role => role.name === message.author.username);
             if (role) role.edit({ name: message.author.username, color: args[1]});
             else {
