@@ -25,10 +25,10 @@ module.exports = {
             if (role) if (!message.member.roles.cache.has(message.author.username)) {message.member.roles.add(role); role.edit({ name: message.author.username, color: args[1]});
         }if (!role) {
             message.guild.roles.create(
-                {data: {name: message.author.username, color: args[1], permissions: 0}}).then(role => {role.setPosition(100); message.member.roles.add(role)}); message.channel.send(roleAddedEmbed)
+                {data: {name: message.author.username, color: args[1], permissions: 0}}).then(role => {role.setPosition(102); message.member.roles.add(role)}); message.channel.send(roleAddedEmbed)
         }if (!message.member.roles.cache.some(role => role.name === '✭ Booster')) {
             message.channel.send(mustBeBoosterEmbed);
         }
     }
+    }
  }
-}
