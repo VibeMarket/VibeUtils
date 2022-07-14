@@ -9,17 +9,13 @@ module.exports = {
         const serverSpecsEmbed = new Discord.MessageEmbed()
         .setColor(embedColor)
         .addFields(
-           {name: "My server specs", value: `~Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20 GHz~
-           
-           ~vCores: 6~
-           
-           ~RAM: 16 gigabytes DDR4~
-           
-           ~Disk Space: 400 gigabytes~
-           
-           ~Uplink: 400 mbps~
-           
-           ~OS: Ubuntu 20.04~`}
+           {name: "Server specs", value: `
+           Intel(R) Xeon(R) CPU E5-2690 v2
+           Cores: 6
+           RAM: 16 gigabytes DDR3
+           Disk Space: 256 gigabytes
+           Uplink: 100 mbps with 1 gbps burst
+           OS: Ubuntu 22.04`}
         )
         .setFooter("Made by Cryptic#0001 | © Vibe Market")
      message.channel.send(serverSpecsEmbed);
