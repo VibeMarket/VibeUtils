@@ -2,6 +2,8 @@
 
 #### VibeUtils
 
+This recode was done entirely by Polar (https://github.com/polargh)! 
+
 Recoded VibeUtils in DiscordJS v13
 
 ------------
