@@ -12,4 +12,5 @@ RUN npm install
 COPY . /usr/src/bot
 
 # Start me!
+CMD ["npm run", "gen"]
 CMD ["node", "index.js"]
