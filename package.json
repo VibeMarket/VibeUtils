@@ -1,18 +1,18 @@
 {
-  "name": "vibe_utils",
-  "version": "1.0.0",
-  "description": "Utility bot for Vibe Market",
+  "name": "VibeUtils",
+  "version": "1.0",
+  "description": "The utility bot for Vibe Market",
   "main": "index.js",
-  "dependencies": {
-    "@discordjs/builders": "^0.12.0",
-    "@discordjs/rest": "^0.3.0",
-    "discord-api-types": "^0.27.3",
-    "discord.js": "^12.5.3",
-    "dotenv": "^9.0.2"
-  },
+  "author": "polar!#7979",
+  "license": "GNU",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gen": "node generate.js",
+    "start": "node ."
   },
-  "author": "Kevin",
-  "license": "GPL-2.0-only"
+  "dependencies": {
+    "@discordjs/rest": "^0.3.0",
+    "discord-api-types": "^0.29.0",
+    "discord.js": "^13.6.0"
+  }
 }

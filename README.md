@@ -1,13 +1,18 @@
-# VibeUtils
-The vibe utils bot, contribute if you want
+<h1 align="center"><img height="35" src="https://emoji.gg/assets/emoji/9299-blurple-ban.png"> VibeUtils</h1>
 
-Docker image: https://hub.docker.com/repository/docker/itscryptic/vibeutils/
+#### VibeUtils
 
-# If you're prone to spelling things wrong, please use a spell checker before commiting!
+Recoded VibeUtils in DiscordJS v13
 
-# Running yourself
+------------
 
-Run git clone https://github.com/VibeMarket/VibeUtils/
-Edit the config.yml with your bots token 
-Then run ducker build -t vibeutils . while you're in the VibeUtils directory.
-Then run docker run -d vibeutils this should bring the bot online!
+### Dependencies:
+- DiscordJS
+- Zod
+- Javascript
+
+------------
+
+### Copyright Notice:
+
+This project is made for the <a href="https://vibemarket.org">VibeMarket</a>

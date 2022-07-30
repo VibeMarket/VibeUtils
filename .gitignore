@@ -1,5 +1,4 @@
-.env
-node_modules
-config/config.json
-commands/uptime.js
-config/config.json
+*/config.json
+
+node_modules/
+node_modules/*
